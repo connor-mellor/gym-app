@@ -1,9 +1,8 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding: 1rem;
   min-height: 100vh;
 }
 
@@ -22,6 +21,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   gap: 0.5rem;
 }
 
@@ -41,7 +41,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
+  grid-template-columns: repeat(3, minmax(25%, auto));
   width: var(--max-width);
   max-width: 100%;
 }
@@ -73,6 +73,8 @@
 }
 
 .center {
+  width: 100%;
+  max-width: var(--max-width);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,28 +82,8 @@
   padding: 4rem 0;
 }
 
-.center::before {
-  background: var(--secondary-glow);
-  border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
-}
-
-.center::after {
-  background: var(--primary-glow);
-  width: 240px;
-  height: 180px;
-  z-index: -1;
-}
-
-.center::before,
-.center::after {
-  content: '';
-  left: 50%;
-  position: absolute;
-  filter: blur(45px);
-  transform: translateZ(0);
+.muscleFlexLogoFlipped {
+  transform: scaleX(-1);
 }
 
 .logo,
@@ -258,7 +240,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .vercelLogo {
+  .muscleFlexLogo {
     filter: invert(1);
   }
 
