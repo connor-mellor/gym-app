@@ -1,0 +1,59 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f0f0f0;
+    height: 100vh;
+    width: 100vw;
+    text-align: left;
+    padding: 1rem 1.2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+    transform: translate(-100%);
+    font-family: var(--font-bebas-neue);
+    letter-spacing: 0.1rem;
+}
+
+.menu a {
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 2rem 0;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    color: #f0f0f0;
+    width: 100%;
+    text-decoration: none;
+    transition: color 0.3s linear;
+    text-align: center;
+    background: #000;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+
+.hamburgerOpen {
+    transform: translate(0);
+}
+
+.close {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    color: #000;
+    margin-bottom: 2rem;
+    text-align: end;
+}
+
+.close > div {
+    height: 50px;
+    width: 50px;
+    aspect-ratio: 1/1;
+    color: #f0f0f0;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}

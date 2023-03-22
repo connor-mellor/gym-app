@@ -6,6 +6,8 @@ import Navigation from '@/components/Navigation'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+const type = "Home";
+
   return (
     <>
       <Head>
@@ -16,6 +18,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Navigation />
+        <h1 className={styles.title}>This is a {type} page</h1>
       </main>
     </>
   )

@@ -1,41 +1,41 @@
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
+import Link from 'next/link'
 
-const Navigation = () => {
-    const NavItems: Navigation = {
-        title: "Progress Gym Tracker",
-        ctaOne: "View PB's",
-        ctaTwo: "Record PB's"
-    }
+import { Burger, Menu } from '../components'
+import { useState } from 'react';
+
+export default function Navigation() {
+    const [hamburgerOpen, setHamburgerOpen] = useState(false);
+
+    const toggleHamburger = () => setHamburgerOpen(!hamburgerOpen);
     
     return (
         <div className={styles.nav}>
           <div className={styles.center}>
-            <div className={styles.logoContainer}>
-              <Image
-                src="/muscle-flex.svg"
-                alt="muscle flex logo"
-                className={styles.logo}
-                width={100}
-                height={75}
-                priority
-              />
-            </div>
+            <Link href="/">
+                <div className={styles.logoContainer}>
+                    <Image
+                        src="/muscle-flex.svg"
+                        alt="muscle flex logo"
+                        className={styles.logo}
+                        width={100}
+                        height={75}
+                        priority
+                    />
+                </div>
+            </Link>
             <div className={styles.titleContainer}>
-              <h1 className={styles.title}> {NavItems.title} </h1>
+              <h1 className={styles.title}> Progress Gym Tracker </h1>
             </div>
           </div>
 
           <div className={styles.center}>
-            <p className={styles.typography}>
-              <a href="#"> {NavItems.ctaOne} </a>
-            </p>
-            <p className={styles.typography}>
-              <a href="#" className={styles.cta}> {NavItems.ctaTwo} </a>
-            </p>
+            <div onClick={toggleHamburger}>
+                <Burger />
+            </div>
+                <Menu hamburgerOpen={hamburgerOpen} toggleHamburger={toggleHamburger}/>
           </div>
         </div>
     )
 }
-
-export default Navigation;
