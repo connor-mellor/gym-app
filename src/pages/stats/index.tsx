@@ -1,4 +1,4 @@
-import Navigation from "@/components/Navigation"
+import { Navigation } from "@/components/Navigation/Navigation"
 import styles from '@/styles/Home.module.css'
 
 export default function Stats() {

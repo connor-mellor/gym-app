@@ -1,9 +1,9 @@
 import classes from './Burger.module.css'
-import Link from 'next/link'
+import clsx from 'clsx'
 
-export function Burger() {
+export function Burger({ isOpen, toggleBurgerMenu }: any) {
   return (
-    <div className={classes.burger}>
+    <div className={clsx(classes.burger, isOpen && classes.open)} onClick={toggleBurgerMenu}>
       <div />
       <div />
       <div />

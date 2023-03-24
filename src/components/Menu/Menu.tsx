@@ -1,16 +1,29 @@
 import Link from "next/link";
 import classes from './Menu.module.css'
+import clsx from 'clsx';
 
-export function Menu({ hamburgerOpen, toggleHamburger }: any) {
-    const open = hamburgerOpen ? classes.hamburgerOpen : ''
+type Props = {
+  isOpen: boolean,
+  links: Link[]
+}
 
-    return (
-        <div className={`${classes.menu} ${open}`}>
-            <div className={classes.close}>
-                <div onClick={toggleHamburger}>Close</div>
-            </div>
-            <Link href="/stats">View PB</Link>
-            <Link href="/stats">Record PB</Link>
-        </div>
-    )
+export function Menu({ isOpen, links }: any) {
+  return (
+    <div className={clsx(classes.menu, isOpen && classes.hamburgerOpen)}>
+      <Link href="/"> Dashboard </Link>
+      <Link href="/stats"> View PB's </Link>
+      <Link href="/stats"> Record PB's </Link>
+      {/* {
+        links.map(({ name, href }) => {
+          console.log(name, href)
+        })
+      } */}
+
+      {/* {links.map(({ name, href }, index) => {        
+        index ? (
+          <Link key={index} href={href}> {name} </Link>
+        ) : null
+      })} */}
+    </div>
+  )
 }
