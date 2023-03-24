@@ -11,8 +11,8 @@ export function Menu({ isOpen, links }: any) {
   return (
     <div className={clsx(classes.menu, isOpen && classes.hamburgerOpen)}>
       <Link href="/"> Dashboard </Link>
-      <Link href="/stats"> View PB's </Link>
-      <Link href="/stats"> Record PB's </Link>
+      <Link href="/stats"> View PBs </Link>
+      <Link href="/stats"> Record PBs </Link>
       {/* {
         links.map(({ name, href }) => {
           console.log(name, href)
