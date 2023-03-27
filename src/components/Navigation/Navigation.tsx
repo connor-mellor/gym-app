@@ -11,6 +11,8 @@ export function Navigation() {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleBurgerMenu = () => setIsOpen(!isOpen);
+    const myLoader = ({ src, width, quality }: Loader) => `https://connor-mellor.github.io/gym-app/${src}?w=${width}&q=${quality || 75}`;
+    
     
     return (
         <div className={classes.nav}>
@@ -18,6 +20,7 @@ export function Navigation() {
             <Link href="/">
               <div className={classes.logoContainer}>
                 <Image
+                  loader={myLoader}
                   src="/muscle-flex.svg"
                   alt="muscle flex logo"
                   className={classes.logo}
