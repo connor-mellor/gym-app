@@ -39,6 +39,7 @@ export function Navigation() {
             />
             <Menu 
               isOpen={isOpen} 
+              links={links}
             />
           </div>
         </div>

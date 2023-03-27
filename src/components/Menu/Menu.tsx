@@ -4,26 +4,19 @@ import clsx from 'clsx';
 
 type Props = {
   isOpen: boolean,
-  links: Link[]
+  links: Link[],
 }
 
-export function Menu({ isOpen, links }: any) {
+export function Menu({ isOpen, links }: Props) {
+
   return (
     <div className={clsx(classes.menu, isOpen && classes.hamburgerOpen)}>
-      <Link href="/"> Dashboard </Link>
-      <Link href="/stats"> View PBs </Link>
-      <Link href="/stats"> Record PBs </Link>
-      {/* {
-        links.map(({ name, href }) => {
-          console.log(name, href)
-        })
-      } */}
-
-      {/* {links.map(({ name, href }, index) => {        
-        index ? (
-          <Link key={index} href={href}> {name} </Link>
-        ) : null
-      })} */}
+      {
+        links.map(({ name, href }, index) => 
+          <Link key={index} href={href}> { name } </Link>
+        )
+      }
+      
     </div>
   )
 }
