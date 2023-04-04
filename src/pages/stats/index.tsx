@@ -6,7 +6,6 @@ export default function Stats() {
 
     return (
         <main className={styles.main}>
-            <Navigation />
             <h1 className={styles.title}>This is a {type} page</h1>
         </main>
     )

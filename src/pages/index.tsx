@@ -1,12 +1,10 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import { Navigation } from '@/components/Navigation/Navigation'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-const type = "Home";
 
   return (
     <>
@@ -17,8 +15,7 @@ const type = "Home";
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Navigation />
-        <h1 className={styles.title}>This is a {type} page</h1>
+        <h1 className={styles.title}>DASHBOARD</h1>
       </main>
     </>
   )

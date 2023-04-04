@@ -18,17 +18,17 @@ export function Navigation() {
         <div className={classes.nav}>
           <div className={classes.center}>
             <Link href="/">
-              <div className={classes.logoContainer}>
-                <Image
-                  loader={myLoader}
-                  src="/muscle-flex.svg"
-                  alt="muscle flex logo"
-                  className={classes.logo}
-                  width={45}
-                  height={45}
-                  priority
-                />
-              </div>
+                <div className={classes.logoContainer}>
+                  <Image
+                    loader={myLoader}
+                    src="/muscle-flex.svg"
+                    alt="muscle flex logo"
+                    className={classes.logo}
+                    width={45}
+                    height={45}
+                    priority
+                  />
+                </div>
             </Link>
             <div className={classes.titleContainer}>
               <h1 className={classes.title}> Progress Gym Tracker </h1>
@@ -43,6 +43,7 @@ export function Navigation() {
             <Menu 
               isOpen={isOpen} 
               links={links}
+              toggleBurgerMenu={toggleBurgerMenu}
             />
           </div>
         </div>

@@ -5,18 +5,20 @@ import clsx from 'clsx';
 type Props = {
   isOpen: boolean,
   links: Link[],
+  toggleBurgerMenu: () => void
 }
 
-export function Menu({ isOpen, links }: Props) {
+export function Menu({ isOpen, links, toggleBurgerMenu }: Props) {
 
   return (
     <div className={clsx(classes.menu, isOpen && classes.hamburgerOpen)}>
       {
-        links.map(({ name, href }, index) => 
-          <Link key={index} href={href}> { name } </Link>
+        links.map(({ id, name, href }) => 
+          <Link key={id} href={href} onClick={() => toggleBurgerMenu()}> 
+            { name }
+          </Link>
         )
       }
-      
     </div>
   )
 }
