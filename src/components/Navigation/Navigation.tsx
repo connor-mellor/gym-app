@@ -21,7 +21,7 @@ export function Navigation() {
                 <div className={classes.logoContainer}>
                   <Image
                     loader={myLoader}
-                    src={process.env.assetPrefix + '/muscle-flex.svg'}
+                    src="/muscle-flex.svg"
                     alt="muscle flex logo"
                     className={classes.logo}
                     width={45}

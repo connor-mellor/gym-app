@@ -4,8 +4,3 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
-
-module.exports = {
-  basePath: '/gym-app/',
-  assetPrefix: '/gym-app/',
-}
