@@ -1,24 +1,29 @@
-import { Navigation } from "@/components";
-import { Table } from "@/components/Table";
-import { useRouter } from "next/router"
-import { sets } from "../../../../fixtures";
+import { WorkoutSession } from '@/components/WorkoutSession/index';
+import { useRouter } from 'next/router';
 
-export default function Stats() {
-
+export default function Stats({ dataExport }: any) {
     const router = useRouter();
+    const { id } = router.query
+
+    let workoutSession: any;
+
+    dataExport.map((item: any) => {
+        if(item.id === id) {
+            workoutSession = item;
+        }
+    })
 
     return (
         <main>
-            <h1>Dyncamic page: {router.query.id}</h1>
-            <p>This page will be used for viewing individual sessions e.g. by day etc...</p>
-            <Table sets={sets}/>
+            <WorkoutSession workoutSession={workoutSession} />
         </main>
     )
 }
 
-//TODO:
-    // Component structure:
-        // <Session />
-        // <Workout >
-            // <Table />
-        // </Workout> 
+export async function getServerSideProps() {
+    const url: any = "http://localhost:3000/api/stats/view/workoutSessions"
+    const res: any = await fetch(url)
+    const dataExport: any = await res.json()
+    console.log(dataExport)
+    return { props: { dataExport } }
+}
