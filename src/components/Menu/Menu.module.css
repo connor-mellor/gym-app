@@ -16,6 +16,7 @@
     font-family: var(--font-bebas-neue);
     letter-spacing: 0.1rem;
     overflow-y: scroll;
+    z-index: 99;
 }
 
 .menu a {

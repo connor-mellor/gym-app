@@ -11,5 +11,15 @@ export const workouts = [
         workoutName: "Hammer Curls",
         sets: sets
     },
+    {
+        id: 3,
+        workoutName: "Hack Squats",
+        sets: sets
+    },
+    {
+        id: 4,
+        workoutName: "Russain Twists",
+        sets: sets
+    },
 
 ]
