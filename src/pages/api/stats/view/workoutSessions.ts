@@ -4,7 +4,7 @@ export default function handler(req: any, res: any) {
       {
         id: "1",
         sessionName: "Pull Session",
-        sessionDescription: 'description of workout here ...',
+        sessionDescription: 'Today didn\'t feel too mint, did me bess - somfin better than nuffin',
         workouts: [
           {
             id: 1,

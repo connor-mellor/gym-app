@@ -20,7 +20,7 @@ export function BasicTable({ sets }: any) {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
+        <TableHead sx={{bgcolor: '#f0f0f0'}}>
           <TableRow>
             <TableCell align="center">Set&nbsp;(qty)</TableCell>
             <TableCell align="center">Weight&nbsp;(kg)</TableCell>

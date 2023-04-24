@@ -1,4 +1,5 @@
 import { WorkoutSession } from '@/components/WorkoutSession/index';
+import { Container } from '@material-ui/core';
 import { useRouter } from 'next/router';
 
 export default function Stats({ dataExport }: any) {
@@ -14,9 +15,9 @@ export default function Stats({ dataExport }: any) {
     })
 
     return (
-        <main>
+        <Container maxWidth={false}>
             <WorkoutSession workoutSession={workoutSession} />
-        </main>
+        </Container>
     )
 }
 

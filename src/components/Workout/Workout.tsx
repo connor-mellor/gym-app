@@ -1,26 +1,34 @@
-import { Grid } from "@material-ui/core";
+import { Box, Divider, IconButton, Typography } from "@material-ui/core";
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditNoteIcon from '@mui/icons-material/EditNote';
+import { Stack } from "@mui/material";
 import { BasicTable } from "../BasicTable";
+
+import styles from'./Workout.module.css'
 
 export function Workout({ workout: { id, workoutName, sets } }: any) {
     return (
-        <Grid container spacing={2}>
-            <Grid item xs={4}>
-                <h3>
-                    <span>
-                        { id + '. ' }
-                    </span>
-                    { workoutName }
-                </h3>
-            </Grid>
-            <Grid item xs={4}>
-                <p>Total weight: ???kg</p>
-            </Grid>
-            <Grid item xs={4}>
-                <button>Remove Workout</button>
-            </Grid>
-            <Grid item xs={12}>
-                <BasicTable sets={sets} />
-            </Grid>
-        </Grid>
+        <Box className={styles.container}>
+            <Stack 
+                direction="row"
+                justifyContent="space-between"
+                alignItems="center"
+                flexWrap="wrap"
+                useFlexGap
+                spacing={1}
+            >
+                <Typography variant={'subtitle1'}>{id}. {workoutName}</Typography>
+                <Typography variant={'body2'}>Total weight: ???kg</Typography>
+                <IconButton size="small" color="inherit" aria-label="delete">
+                    <EditNoteIcon />
+                    <Typography variant="body2">Edit</Typography>
+                </IconButton>
+                <IconButton size="small" color="secondary" aria-label="delete">
+                    <DeleteIcon />
+                    <Typography variant="body2">Remove</Typography>
+                </IconButton>
+            </Stack>
+            <BasicTable sets={sets} />
+        </Box>
     )
 }

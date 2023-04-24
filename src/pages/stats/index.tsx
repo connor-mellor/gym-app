@@ -1,12 +1,12 @@
 import { Navigation } from "@/components/Navigation/Navigation"
 import styles from '@/styles/Home.module.css'
+import { Typography } from "@material-ui/core"
 
 export default function Stats() {
-    const type = "Statistics"
 
     return (
         <main className={styles.main}>
-            <h1 className={styles.title}>This is a {type} page</h1>
+            <Typography gutterBottom={true} variant={'h5'}>Statistics Page</Typography>
         </main>
     )
 }
