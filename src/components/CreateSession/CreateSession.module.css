@@ -1,0 +1,13 @@
+.moduleContainer input,
+.moduleContainer textarea,
+.moduleContainer label,
+.moduleContainer button {
+  color: #fff;
+}
+.moduleContainer button {
+  border-color: #fff;
+}
+
+.moduleContainer.open {
+  left: 50%;
+}
