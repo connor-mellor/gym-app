@@ -10,9 +10,12 @@ import {
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import Link from "next/link";
-import { workoutSession } from "../../../../fixtures/workoutSession";
+import { useState } from "react";
 
-export default function Stats() {
+export default function Stats({ dataExport }: any) {
+  const { sessions: workoutSessions } = dataExport;
+  const [sessions, setSessions] = useState(workoutSessions);
+
   return (
     <Box className={styles.container}>
       <Stack
@@ -32,7 +35,7 @@ export default function Stats() {
       </Stack>
       <Divider color="#f0f0f0" />
       <Grid container spacing={2} sx={{ paddingY: 2 }}>
-        {workoutSession.map(
+        {sessions.map(
           ({ id, sessionName, sessionDescription }: any, index: any) => (
             <Grid key={index} item xs={12} sm={6} md={3}>
               <Link href={`/stats/view/${id}`}>
@@ -48,4 +51,11 @@ export default function Stats() {
       </Grid>
     </Box>
   );
+}
+
+export async function getServerSideProps() {
+  const url: any = "http://localhost:3000/api/statistics/sessions";
+  const res: any = await fetch(url);
+  const dataExport: any = await res.json();
+  return { props: { dataExport } };
 }

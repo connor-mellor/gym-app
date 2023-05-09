@@ -1,69 +1,69 @@
 .menu {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
-    grid-auto-rows: 100px;
-    gap: 1rem;
-    background: #231f20;
-    height: 90vh;
-    width: 100vw;
-    text-align: left;
-    padding: 1rem 1.2rem;
-    position: absolute;
-    top: 10vh;
-    left: 0;
-    transition: transform 0.3s ease-in-out;
-    transform: translate(-100%);
-    font-family: var(--font-bebas-neue);
-    letter-spacing: 0.1rem;
-    overflow-y: scroll;
-    z-index: 99;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-auto-rows: 100px;
+  gap: 1rem;
+  background: #231f20;
+  height: 90vh;
+  width: 100vw;
+  text-align: left;
+  padding: 1rem 1.2rem;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+  transform: translate(-100%);
+  font-family: var(--font-bebas-neue);
+  letter-spacing: 0.1rem;
+  overflow-y: scroll;
+  z-index: 99;
 }
 
 .menu a {
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    padding: 2rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #000;
-    height: 100px;
-    width: 100%;
-    text-decoration: none;
-    transition: color 0.3s linear;
-    background: #f0f0f0;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #000;
+  height: 100px;
+  width: 100%;
+  text-decoration: none;
+  transition: color 0.3s linear;
+  background: #d0fd3e;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hamburgerOpen {
-    transform: translate(0);
+  transform: translate(0);
 }
 
-@media(prefers-color-scheme: dark) {
-    .menu {
-        background: #f0f0f0;
-    }
+@media (prefers-color-scheme: dark) {
+  .menu {
+    background: #f0f0f0;
+  }
 
-    .menu a {
-        color: #f0f0f0;
-        background: #231f20;
-    }
+  .menu a {
+    color: #000;
+    background: #d0fd3e;
+  }
 }
 
 /* Tablet and Smaller Desktop */
 @media (max-width: 700px) {
-    .menu {
-        grid-template-columns: repeat(1, 1fr);
-    }
+  .menu {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
-    .menu a {
-        font-size: 0.8rem;
-        margin: 0 0 1rem 0;
-    }
+  .menu a {
+    font-size: 0.8rem;
+    margin: 0 0 1rem 0;
+  }
 
-    .menu a:last-child {
-        margin: 0;
-    }
+  .menu a:last-child {
+    margin: 0;
+  }
 }

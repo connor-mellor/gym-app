@@ -7,7 +7,10 @@ export default async function handler(
 ) {
   let { db } = await connectToDatabase();
 
-  const comments = await db.collection("comments").find().toArray();
+  const workoutSessions = await db
+    .collection("workoutSessions")
+    .find()
+    .toArray();
 
-  res.status(200).json({ comments });
+  res.status(200).json({ workoutSessions });
 }

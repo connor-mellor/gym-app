@@ -18,7 +18,7 @@
 } */
 
 .logoContainer {
-  background: #231f20;
+  background: #d0fd3e;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -29,7 +29,7 @@
 }
 
 .logo {
-  filter: invert(1);
+  filter: invert(0);
 }
 
 .titleContainer {
@@ -43,7 +43,7 @@
   }
 
   .logoContainer {
-    background: #f0f0f0;
+    background: #d0fd3e;
   }
 
   .logo {

@@ -1,4 +1,5 @@
 import { Navigation } from "@/components";
+import { DenseAppBar } from "@/components/DenseAppBar";
 import "@/styles/globals.css";
 import theme from "@/theme";
 import { ThemeProvider } from "@material-ui/core";
