@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { connectToDatabase } from "../../../../lib/mongodb";
+import { connectToDatabase } from "../../../lib/mongodb";
 
 export default async function handler(
   req: NextApiRequest,
@@ -7,7 +7,11 @@ export default async function handler(
 ) {
   let { db } = await connectToDatabase();
 
-  const sessions = await db.collection("sessions").find().toArray();
+  const sessions = await db
+    .collection("sessions")
+    .find()
+    .sort({ id: 1 })
+    .toArray();
 
   res.status(200).json({ sessions });
 }

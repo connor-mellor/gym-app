@@ -1,17 +1,16 @@
 import Image from "next/image";
 import classes from "./Navigation.module.css";
 import Link from "next/link";
-
 import { Burger, Menu } from "..";
 import { useState } from "react";
-
+import { useMediaQuery } from "@material-ui/core";
 import { links } from "../../../fixtures";
 import { Box, Typography } from "@mui/material";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleBurgerMenu = () => setIsOpen(!isOpen);
+  const isMobile = useMediaQuery((theme: any) => theme.breakpoints.up("sm"));
 
   return (
     <Box className={classes.nav}>
@@ -24,25 +23,23 @@ export function Navigation() {
         <Link href="/">
           <Box className={classes.logoContainer}>
             <Image
-              src="/muscle-flex.svg"
-              alt="muscle flex logo"
+              src="/weightlifter-frontal-silhouette-svgrepo-com.svg"
+              alt="weightlifter logo"
               className={classes.logo}
-              width={45}
-              height={45}
+              height={40}
+              width={40}
               priority
             />
           </Box>
         </Link>
-        <Box className={classes.titleContainer}>
-          <Typography
-            sx={{ fontFamily: `var(--font-bebas-neue)`, margin: 0 }}
-            variant="h4"
-          >
-            Progress Gym Tracker
-          </Typography>
-        </Box>
+        {isMobile && (
+          <Box className={classes.titleContainer}>
+            <Typography className={classes.title} variant="h4">
+              Progress Gym Tracker
+            </Typography>
+          </Box>
+        )}
       </Box>
-
       <Box display="flex" justifyContent="end" width="50%">
         <Burger isOpen={isOpen} toggleBurgerMenu={toggleBurgerMenu} />
         <Menu

@@ -25,10 +25,10 @@ export default function Stats({ dataExport }: any) {
         spacing={2}
       >
         <Typography gutterBottom={true} variant={"h5"}>
-          Statistics Page
+          Sessions
         </Typography>
         <Link href={`/stats/create/`}>
-          <IconButton color="primary" aria-label="add">
+          <IconButton sx={{ color: "#d0fd3e" }} aria-label="add">
             <AddIcon />
           </IconButton>
         </Link>

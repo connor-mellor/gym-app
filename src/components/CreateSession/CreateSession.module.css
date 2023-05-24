@@ -11,3 +11,8 @@
 .moduleContainer.open {
   left: 50%;
 }
+
+.moduleContainer {
+  padding: 1rem 1.2rem;
+  position: relative;
+}
