@@ -11,7 +11,7 @@ export default async function handler(
 
     const sessionsCount = await db.collection("sessions").countDocuments(); // Get the count of existing documents
     const workoutSessionsCount = await db
-      .collection("sessions")
+      .collection("workoutSessions")
       .countDocuments(); // Get the count of existing documents
 
     const { sessionName, sessionDescription } = JSON.parse(req.body);
