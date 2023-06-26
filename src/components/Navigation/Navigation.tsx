@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import classes from "./Navigation.module.css";
 import Link from "next/link";
 import { Burger, Menu } from "..";
