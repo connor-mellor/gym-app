@@ -20,7 +20,7 @@ export function Navigation() {
         justifyContent="start"
         width="50%"
       >
-        <Link href="/">
+        <Link href="/" legacyBehavior>
           <Box className={classes.logoContainer}>
             <Image
               src="/weightlifter-frontal-silhouette-svgrepo-com.svg"

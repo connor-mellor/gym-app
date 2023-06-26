@@ -13,7 +13,7 @@ export function Menu({ isOpen, links, toggleBurgerMenu }: Props) {
   return (
     <Box className={clsx(classes.menu, isOpen && classes.hamburgerOpen)}>
       {links.map(({ id, name, href }) => (
-        <Link key={id} href={href} onClick={() => toggleBurgerMenu()}>
+        <Link key={id} href={href} onClick={() => toggleBurgerMenu()} legacyBehavior>
           {name}
         </Link>
       ))}

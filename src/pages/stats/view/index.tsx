@@ -50,7 +50,7 @@ export default function Stats({ sessions: dataExport }: any) {
         <Typography gutterBottom={true} variant={"h5"}>
           Sessions
         </Typography>
-        <Link href={`/stats/create/`}>
+        <Link href={`/stats/create/`} legacyBehavior>
           <IconButton sx={{ color: "#d0fd3e" }} aria-label="add">
             <AddIcon />
           </IconButton>
@@ -61,7 +61,7 @@ export default function Stats({ sessions: dataExport }: any) {
         {sessions.map(
           ({ id, sessionName, sessionDescription }: any, index: any) => (
             <Grid key={index} item xs={12} sm={6} md={3}>
-              <Link href={`/stats/view/${id}`}>
+              <Link href={`/stats/view/${id}`} legacyBehavior>
                 <ActionAreaCard
                   id={id}
                   sessionName={sessionName}
