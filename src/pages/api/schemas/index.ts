@@ -27,6 +27,7 @@ export const typeDefs = gql`
   }
 
   type Query {
+    hello: String
     getSessions: [Sessions]
     getWorkouts: [WorkoutSession]
   }

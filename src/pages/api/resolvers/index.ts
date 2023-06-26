@@ -1,8 +1,8 @@
 import { connectToDatabase } from "@/lib/mongodb";
-import axios from "axios";
 
 export const resolvers = {
   Query: {
+    hello: () => "hi!",
     getSessions: async () => {
       try {
         let { db } = await connectToDatabase();
@@ -14,6 +14,12 @@ export const resolvers = {
           .toArray();
 
         return sessions;
+
+        // return await context.db
+        //   .collection("sessions")
+        //   .find()
+        //   .sort({ id: 1 })
+        //   .toArray();
       } catch (error) {
         throw error;
       }
