@@ -1,5 +1,5 @@
 import { WorkoutSession } from "@/components/WorkoutSession/index";
-import { Container } from "@material-ui/core";
+import { Container } from "@mui/material";
 import { useRouter } from "next/router";
 
 export default function Stats({ dataExport }: any) {

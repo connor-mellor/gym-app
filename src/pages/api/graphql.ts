@@ -1,10 +1,8 @@
 import { ApolloServer } from "@apollo/server";
 import { startServerAndCreateNextHandler } from "@as-integrations/next";
-import { typeDefs } from "./schemas";
 import { resolvers } from "./resolvers";
-import cors from "cors";
+import { typeDefs } from "./schemas";
 
-import type { NextApiRequest, NextApiResponse } from "next";
 
 // let apolloServer: ApolloServer;
 

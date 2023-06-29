@@ -1,6 +1,6 @@
 import classes from "./Burger.module.css";
 import clsx from "clsx";
-import { Box } from "@material-ui/core";
+import { Box } from "@mui/material";
 
 type Props = {
   isOpen: boolean;

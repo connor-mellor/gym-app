@@ -1,4 +1,4 @@
-import { Box, Divider, IconButton, Typography } from "@material-ui/core";
+import { Box, Divider, IconButton, Typography } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditNoteIcon from "@mui/icons-material/EditNote";
 import { Stack } from "@mui/material";

@@ -3,7 +3,7 @@ import classes from "./Navigation.module.css";
 import Link from "next/link";
 import { Burger, Menu } from "..";
 import { useState } from "react";
-import { useMediaQuery } from "@material-ui/core";
+import { useMediaQuery } from "@mui/material";
 import { links } from "../../../fixtures";
 import { Box, Typography } from "@mui/material";
 

@@ -2,7 +2,7 @@ import { Divider, Typography } from "@mui/material";
 import { Workout } from "../Workout/index";
 import styles from "./WorkoutSession.module.css";
 import AddIcon from "@mui/icons-material/Add";
-import { Box, IconButton } from "@material-ui/core";
+import { Box, IconButton } from "@mui/material";
 import { useState } from "react";
 
 export function WorkoutSession({
@@ -51,7 +51,11 @@ export function WorkoutSession({
       <Typography gutterBottom={true} variant={"body2"}>
         {sessionDescription}
       </Typography>
-      <IconButton color="primary" aria-label="add" onClick={() => addWorkout()}>
+      <IconButton
+        color="primary"
+        aria-label="add"
+        onClick={() => addWorkout()}
+        size="large">
         <AddIcon />
       </IconButton>
       <Divider color="#f0f0f0" />

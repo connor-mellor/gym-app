@@ -17,7 +17,7 @@ export function DenseAppBar() {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
-          >
+            size="large">
             <MenuIcon />
           </IconButton>
           <Image

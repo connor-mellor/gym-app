@@ -7,7 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { useState } from "react";
-import { useTheme } from "@material-ui/core";
+import { useTheme } from "@mui/material";
 import { Select } from "../Select";
 
 export function BasicTable({ sets }: any) {

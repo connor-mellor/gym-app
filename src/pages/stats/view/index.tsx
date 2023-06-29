@@ -1,18 +1,18 @@
 import { ActionAreaCard } from "@/components/ActionAreaCard";
 import styles from "@/styles/Home.module.css";
+import { ApolloClient, InMemoryCache, useQuery } from "@apollo/client";
+import AddIcon from "@mui/icons-material/Add";
 import {
   Box,
   Divider,
   Grid,
   IconButton,
   Stack,
-  Typography,
+  Typography
 } from "@mui/material";
-import AddIcon from "@mui/icons-material/Add";
+import { gql } from "graphql-tag";
 import Link from "next/link";
 import { useState } from "react";
-import { gql } from "apollo-server-micro";
-import { ApolloClient, InMemoryCache, useQuery } from "@apollo/client";
 
 const GET_SESSIONS = gql`
   query getSessions {
@@ -51,7 +51,7 @@ export default function Stats({ sessions: dataExport }: any) {
           Sessions
         </Typography>
         <Link href={`/stats/create/`} legacyBehavior>
-          <IconButton sx={{ color: "#d0fd3e" }} aria-label="add">
+          <IconButton sx={{ color: "#d0fd3e" }} aria-label="add" size="large">
             <AddIcon />
           </IconButton>
         </Link>

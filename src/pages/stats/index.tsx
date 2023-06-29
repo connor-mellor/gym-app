@@ -1,6 +1,6 @@
 import { Navigation } from "@/components/Navigation/Navigation"
 import styles from '@/styles/Home.module.css'
-import { Typography } from "@material-ui/core"
+import { Typography } from "@mui/material"
 
 export default function Stats() {
 

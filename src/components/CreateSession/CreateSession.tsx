@@ -1,4 +1,4 @@
-import { Box, Button, TextField, Typography } from "@material-ui/core";
+import { Box, Button, TextField, Typography } from "@mui/material";
 import { Stack, Divider } from "@mui/material";
 import styles from "./CreateSession.module.css";
 import { useState } from "react";
